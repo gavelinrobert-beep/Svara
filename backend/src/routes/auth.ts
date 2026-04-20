@@ -2,7 +2,7 @@ import { Router } from 'express';
 import { body } from 'express-validator';
 import { login, logout, me } from '../controllers/auth';
 import { requireAuth } from '../middleware/auth';
-import { authLimiter } from '../middleware/rateLimiter';
+import { authLimiter, apiLimiter } from '../middleware/rateLimiter';
 
 export const authRouter = Router();
 
@@ -16,4 +16,4 @@ authRouter.post(
   login
 );
 authRouter.post('/logout', logout);
-authRouter.get('/me', requireAuth, me);
+authRouter.get('/me', apiLimiter, requireAuth, me);

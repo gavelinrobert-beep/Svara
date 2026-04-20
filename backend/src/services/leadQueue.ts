@@ -60,18 +60,23 @@ async function processLead(leadId: string): Promise<void> {
     });
 
     // Match to business and notify
+    // MVP: assign lead to first match; distribution records track all recipients
     const matches = await leadMatcher.match(leadId, aiResponse.categorySlug, lead.postalCode);
+    let leadAssigned = false;
     for (const match of matches) {
       const business = await prisma.business.findUnique({ where: { id: match.businessId } });
       if (!business) continue;
 
-      // Assign lead to business
-      await prisma.lead.update({
-        where: { id: leadId },
-        data: { businessId: match.businessId },
-      });
+      // Assign lead to first matched business only
+      if (!leadAssigned) {
+        await prisma.lead.update({
+          where: { id: leadId },
+          data: { businessId: match.businessId },
+        });
+        leadAssigned = true;
+      }
 
-      // Create distribution record
+      // Create distribution record for every matched business
       await prisma.leadDistribution.upsert({
         where: { leadId_businessId: { leadId, businessId: match.businessId } },
         update: {},
