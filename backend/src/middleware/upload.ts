@@ -24,6 +24,10 @@ export const upload = multer({
   fileFilter: (_req, file, cb) => {
     const allowed = /jpeg|jpg|png|gif|webp/;
     const ok = allowed.test(file.mimetype);
-    cb(null, ok);
+    if (!ok) {
+      cb(new Error('Endast bildfiler (jpeg, jpg, png, gif, webp) accepteras.'));
+    } else {
+      cb(null, true);
+    }
   },
 });
