@@ -1,0 +1,16 @@
+export const CATEGORY_FOLLOW_UP: Record<string, string> = {
+  'badrumsrenovering': 'Fraga om: yta i m2, befintliga ytskikt (kakel/klinker/annat), onskat tidsplan, om det galler bad/dusch/wc separat, om det finns vattenskada.',
+  'koksrenovering': 'Fraga om: yta i m2, vad som ska bytas (luckor/bankskiva/vitvaror/allt), onskat material, tidsplan.',
+  'malning': 'Fraga om: vilka rum, yta i m2, om tak ska malas, nuvarande farg/tapeter, onskat farg.',
+  'snickeri': 'Fraga om: vad ska byggas/monteras, material (tra/MDF/annat), matt, om ritningar finns.',
+  'el-arbete': 'Fraga om: vad ska installeras (uttag/belysning/el-panel), om det galler nybygge eller renovering, adress for besiktning.',
+  'vvs-rormokeri': 'Fraga om: vad galler det (byte av ror/toalett/dusch/varmvattenberedare), om akut eller planerat, fastighetens alder.',
+  'golvlaggning': 'Fraga om: yta i m2, onskat material (parkett/laminat/klinker/vinyl), om underlag behover atgardas.',
+  'takarbete': 'Fraga om: takets yta i m2, nuvarande taktackning, om det ar lackage eller planerat underhall, atkomlighet.',
+  'tradgardsarbete': 'Fraga om: tradgardens storlek, vad som ska goras (klippning/planering/anlaggning), frekvens (engang/lopande).',
+  'flytt-stadning': 'Fraga om: bostadens storlek i rok/m2, om det ar nytt eller gammalt boende, sarskilda onskemal (fonster ingar?).',
+  'hemstadning': 'Fraga om: bostadens storlek i rok/m2, onskat frekvens (varje vecka/varannan), om det ar hemstad eller kontorsstad.',
+  'fonster-puts': 'Fraga om: antal fonster, typ av fonster (kopplade/post-fonster), tillganglighet (hojd), frekvens.',
+  'flytthjalp': 'Fraga om: fran-adress och till-adress, antal rum, om det finns tunga mobel/piano/annat, onskat datum.',
+  'ovrigt': 'Fraga om: mer detaljer om jobbet, tidsplan och onskemal.',
+};
