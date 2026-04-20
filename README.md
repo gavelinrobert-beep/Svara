@@ -1,7 +1,5 @@
 # Svara
 
-AI Operator for Service Businesses in Sweden — MVP scaffold.
+AI Operator for Service Businesses in Sweden — an MVP that helps Swedish small businesses respond to incoming leads instantly with AI-generated replies in Swedish.
 
-This repository will contain the Svara SaaS MVP: a Swedish-language AI assistant that captures leads for small service businesses and replies automatically within 1–2 minutes.
-
-Setup and architecture docs will be added in the first feature PR.
+Setup instructions and architecture will be added with the initial scaffold.
